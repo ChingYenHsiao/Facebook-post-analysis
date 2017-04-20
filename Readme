@@ -1,0 +1,78 @@
+執行
+1.read_authorName2.py
+>生Fanpage.csv
+2.Get_fanpage_information.py
+>生Fanpage_full.csv
+3.time_analysis_csv_category2
+>所有8種類頁面的文章的整合csv檔，然後算一些feature
+    category_all =  ["Artist" , "Author" , "Blogger", "Musician" ,"Personal Blog", "Comedian","Public Figure","Writer"]
+
+PostId	PostId_part2	week-hour	shares	comments in 24hours	2days	3days	comments	likes	none	characters	message	type	emotion_ratio	updated_time	created_time
+
+
+
+1.
+findpost3.py
+python 2
+-Crawl FB fanpage用
+-Input：page_list、skip_id_list
+-Output:data/日期/FBpage/post+comment
+
+2. reade_authorName.py
+python 3
+#I want to have a fanpage list
+-input:data/日期
+-Output: analysis/Fanpage.csv
+
+reade_authorName2
+改良過比較快
+
+3.Get_fanpage_information.py
+python 3
+#I want to correct enough fanpage information to distinguish garbage / writer fanpage
+
+-input: analysis/Fanpage.csv
+-output:FanPage_full.csv
+
+4.FileCalculated.py
+python 3
+# I want to calculate post of every  fanpage has how many like.emoticon
+Input:./data/20161230/ 資料夾
+Output:./analysis/csv/20161230/Fanpage.csv
+
+5.read_id.py
+#python 3
+把粉絲頁ID的List，從資策會弄的粉絲頁搜尋頁面回傳的json格式中弄出來。
+http://api.ser.ideas.iii.org.tw/docs/index_fb.html#!/fb_fanpage_info/FansPageSearch
+
+
+-input: ./data/20170110/Author
+-output:page_list
+
+6.time_analysis_24hours_average.py
+
+#python3
+# I want to see the trend of  post of different time
+
+input:/csv/Data/fanpage.csv
+Output:/time/Data/fanpage.csv
+
+
+7.time_analysis_csv_category2.py
+#python3
+
+-input: ./data/date/page & Fangpage_full.csv
+-Output: ./csv
+
+8.
+findpage_features.py
+#python3
+#I want to  make a numerical feature csv file of every fanpages to do k-means
+#Input:Fanpage_full.csv &  every Fanpage.csv
+#Output:Post numerical attributes.csv
+算所有的Fanpage的Feature並存成一個表單
+
+9.
+
+
+
